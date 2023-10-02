@@ -5,7 +5,7 @@ import json
 
 def job():
   file_name = "response.json"
-  directory_path = "C:\DataSets\RD Station Data"
+  directory_path = r"C:\\DataSets\\RD Station Data"
   file_path = f"{directory_path}/{file_name}"
   
   api_url = 'http://127.0.0.1:5001/get_deals'
@@ -20,10 +20,10 @@ def job():
   else:
     print(f"Erro ao consumir a APIL {response.status_code}")
     
-schedule.every().day.at("08:00").do(job)
-schedule.every().day.at("11:00").do(job)
-schedule.every().day.at("14:00").do(job)
-schedule.every().day.at("17:00").do(job)
+schedule.every().day.at("14:10").do(job)
+# schedule.every().day.at("11:00").do(job)
+# schedule.every().day.at("14:00").do(job)
+# schedule.every().day.at("17:00").do(job)
 
 while True: 
   schedule.run_pending()

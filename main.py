@@ -3,7 +3,7 @@ import requests
 
 app = Flask(__name__)
 
-@app.route('/get_deals', methods=['GET'])
+@app.route('/get_deals', methods=['POST'])
 def get_deals():
     # URL da API que você deseja consumir
     api_url = 'https://crm.rdstation.com/api/v1/deals?token=6400d8760a67d300105d8ace&page=1&limit=200'
